@@ -1,0 +1,21 @@
+{
+  "private": true,
+  "scripts": {
+    "bsb-watch": "bsb -make-world -w",
+    "build": "shx rm -rf dist && bsb -make-world -clean-world && parcel build public/index.html && shx cp public/robots.txt dist",
+    "parcel-watch": "parcel public/index.html"
+  },
+  "dependencies": {
+    "bs-css-emotion": "^1.1.0",
+    "date-fns": "^2.12.0",
+    "normalize.css": "^8.0.1",
+    "reason-date-fns": "^0.10.4",
+    "reason-react": "^0.7.0",
+    "typeface-exo-2": "^1.1.4"
+  },
+  "devDependencies": {
+    "bs-platform": "^7.2.2",
+    "parcel-bundler": "^1.12.4",
+    "shx": "^0.3.2"
+  }
+}
