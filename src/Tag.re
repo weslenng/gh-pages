@@ -15,9 +15,11 @@ module Styles = {
     ]);
 };
 
+let rs = React.string;
+
 [@react.component]
 let make = (~tag) => {
   <div className={tag->Styles.tag}>
-    {tag->Data.string_of_tag->React.string}
+    {tag->Data.string_of_tag->rs}
   </div>;
 };

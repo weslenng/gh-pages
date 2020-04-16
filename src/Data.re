@@ -20,7 +20,6 @@ type tag =
   | Interested
   | Intermediary
   | NotInterested
-  | Rusty
   | Toybox
   | WorkExperience;
 
@@ -58,8 +57,8 @@ let raw = {
       name: "Languages",
       attribs: [
         {name: "Javascript", tags: [Advanced, WorkExperience]},
-        {name: "Typescript", tags: [Intermediary, Toybox, WorkExperience]},
-        {name: "Golang", tags: [Intermediary, Interested]},
+        {name: "Typescript", tags: [Advanced, Toybox, WorkExperience]},
+        {name: "Golang", tags: [Intermediary, WorkExperience]},
         {name: "ReasonML, OCaml", tags: [Beginner, Interested]},
         {name: "Rust", tags: [Interested]},
         {name: "C, C++", tags: [Beginner, NotInterested]},
@@ -88,7 +87,7 @@ let raw = {
     {
       name: "Others",
       attribs: [
-        {name: "AWS", tags: [Beginner, Interested, WorkExperience]},
+        {name: "AWS", tags: [Beginner, WorkExperience]},
         {name: "Google Cloud", tags: [Intermediary, Interested]},
         {name: "Docker, Kubernetes", tags: [Beginner, Interested]},
         {name: "Linux", tags: [Advanced, WorkExperience]},
@@ -108,7 +107,6 @@ let string_of_tag =
   | Interested => "interested"
   | Intermediary => "intermediary"
   | NotInterested => "not-interested"
-  | Rusty => "rusty"
   | Toybox => "toybox"
   | WorkExperience => "work-experience";
 
@@ -119,6 +117,5 @@ let color_of_tag =
   | Interested => Css.rgb(145, 215, 255)
   | Intermediary => Css.rgb(255, 159, 91)
   | NotInterested => Css.rgb(222, 222, 222)
-  | Rusty => Css.rgb(222, 222, 222)
   | Toybox => Css.rgb(245, 159, 255)
   | WorkExperience => Css.rgb(188, 255, 193);

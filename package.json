@@ -6,7 +6,7 @@
     "parcel-watch": "parcel public/index.html"
   },
   "dependencies": {
-    "bs-css-emotion": "^1.1.0",
+    "bs-css-emotion": "^1.2.0",
     "date-fns": "^2.12.0",
     "normalize.css": "^8.0.1",
     "reason-date-fns": "^0.10.4",
