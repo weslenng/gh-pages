@@ -32,7 +32,7 @@ module Styles = {
       textAlign(center),
     ]);
 
-  let t = style([padding(px(16)), width(pct(100.0))]);
+  let table = style([padding(px(16)), width(pct(100.0))]);
 
   let theader = style([display(none)]);
 
@@ -68,7 +68,7 @@ module Item = {
 let make = (~skill: Data.skill) => {
   <div className=Styles.container>
     <header> <h3 className=Styles.tcaption> skill.name->rs </h3> </header>
-    <table className=Styles.t>
+    <table className=Styles.table>
       <thead>
         <tr>
           <th className=Styles.theader> "Name"->rs </th>

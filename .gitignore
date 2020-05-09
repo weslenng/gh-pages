@@ -6,13 +6,14 @@
 /node_modules
 
 # misc
-.bsb.lock
-.merlin
-.vscode
+/.bsb.lock
+/.merlin
+/.parcel-cache
+/.vscode
 
 # logs
-yarn-debug.log*
-yarn-error.log*
+/yarn-debug.log*
+/yarn-error.log*
 
 # production
 /dist
