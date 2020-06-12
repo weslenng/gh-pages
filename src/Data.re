@@ -1,6 +1,7 @@
 type social = {
   discord: string,
   github: string,
+  twitter: string,
   linkedin: string,
 };
 
@@ -41,7 +42,7 @@ type raw = {
 let raw = {
   profile: {
     name: "@weslenng",
-    role: "Full Stack Developer",
+    role: "Software Engineer",
     email: "weslenng@outlook.com",
     birth: "2000-12-31",
     location: {js|São Paulo, Brazil|js},
@@ -49,6 +50,7 @@ let raw = {
     social: {
       discord: "https://discordapp.com/users/239549277611753473",
       github: "https://github.com/weslenng",
+      twitter: "https://twitter.com/weslenng2",
       linkedin: "https://www.linkedin.com/in/weslenng",
     },
   },
@@ -60,8 +62,8 @@ let raw = {
         {name: "Typescript", tags: [Advanced, Toybox, WorkExperience]},
         {name: "Golang", tags: [Intermediary, WorkExperience]},
         {name: "ReasonML, OCaml", tags: [Beginner, Interested]},
-        {name: "Rust", tags: [Interested]},
-        {name: "C, C++", tags: [Beginner, NotInterested]},
+        {name: "Rust", tags: [Beginner, Interested]},
+        {name: "C, C++", tags: [Beginner, Interested]},
       ],
     },
     {

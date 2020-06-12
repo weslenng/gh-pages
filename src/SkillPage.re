@@ -1,14 +1,13 @@
 module Styles = {
   open Css;
 
-  let (-@) = Calc.(-);
   let root =
     style([
       alignItems(center),
       display(flexBox),
       flexDirection(column),
       justifyContent(center),
-      minHeight(vh(100.0) -@ px(64)),
+      minHeight(vh(100.0)),
       padding(px(16)),
     ]);
 
@@ -31,8 +30,6 @@ module Styles = {
         ],
       ),
     ]);
-
-  let dark = style([backgroundColor(rgb(48, 48, 48)), height(px(64))]);
 };
 
 let rs = React.string;
@@ -42,7 +39,9 @@ let make = (~skills) => {
   <>
     <div className=Styles.root>
       <div className=Styles.container>
-        <Title bg={Css.rgb(255, 212, 94)}> "My SkillSet"->rs </Title>
+        <Title id="skill-set" bg={Css.rgb(255, 212, 94)}>
+          "My Skill Set"->rs
+        </Title>
       </div>
       <div className=Styles.tcontainer>
         {List.mapi(
@@ -53,6 +52,5 @@ let make = (~skills) => {
          ->ReasonReact.array}
       </div>
     </div>
-    <div className=Styles.dark />
   </>;
 };

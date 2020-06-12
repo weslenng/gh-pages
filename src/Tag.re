@@ -19,7 +19,5 @@ let rs = React.string;
 
 [@react.component]
 let make = (~tag) => {
-  <div className={tag->Styles.tag}>
-    {tag->Data.string_of_tag->rs}
-  </div>;
+  <div className={tag->Styles.tag}> {tag->Data.string_of_tag->rs} </div>;
 };

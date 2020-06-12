@@ -26,19 +26,23 @@ module Emoji = {
 
 type t =
   | Component(ReasonReact.reactElement)
-  | String(string);
+  | String(string)
+  | None;
 
 module Item = {
   [@react.component]
   let make = (~prefix, ~sufix) => {
     <p className=Styles.paragraph>
-      prefix->rs
-      <span>
-        {switch (sufix) {
-         | Component(sufix) => sufix
-         | String(sufix) => sufix->rs
-         }}
-      </span>
+      {switch (prefix) {
+       | Component(prefix) => prefix
+       | String(prefix) => prefix->rs
+       | None => React.null
+       }}
+      {switch (sufix) {
+       | Component(sufix) => sufix
+       | String(sufix) => <span> sufix->rs </span>
+       | None => React.null
+       }}
     </p>;
   };
 };
@@ -74,7 +78,9 @@ let make = (~profile: Data.profile) => {
     ->Js.Float.toString;
 
   <section className=Styles.section>
-    <Title bg={Css.rgb(193, 69, 102)}> profile.name->rs </Title>
+    <Title bg={Css.rgb(193, 69, 102)} id={profile.name}>
+      profile.name->rs
+    </Title>
     <Caption>
       {(profile.role ++ " ")->rs}
       <Emoji ariaLabel="Hot Beverage Emoji" codePoint=9749 />
@@ -82,21 +88,33 @@ let make = (~profile: Data.profile) => {
     </Caption>
     <div className=Styles.details>
       <Item
-        prefix={"Age: " ++ age ++ " "}
+        prefix={("Age: " ++ age ++ " ")->String}
         sufix={
           Component(<Emoji ariaLabel="Sparkles Emoji" codePoint=10024 />)
         }
       />
       <Item
-        prefix="Email: "
+        prefix={"Email: "->String}
         sufix={Component(<Email href={profile.email} />)}
       />
-      <Item prefix="Location: " sufix={profile.location->String} />
-      <Item prefix="Personality: " sufix={profile.personality->String} />
+      <Item prefix={"Location: "->String} sufix={profile.location->String} />
+      <Item
+        prefix={"Personality: "->String}
+        sufix={profile.personality->String}
+      />
+      <Item
+        prefix={
+          Component(
+            <a className=Styles.link href="#skill-set"> "Skill Set"->rs </a>,
+          )
+        }
+        sufix=None
+      />
     </div>
     <div className=Styles.icon>
       <Link href={profile.social.discord}> <Discord /> </Link>
       <Link href={profile.social.github}> <GitHub /> </Link>
+      <Link href={profile.social.twitter}> <Twitter /> </Link>
       <Link href={profile.social.linkedin}> <Linkedin /> </Link>
     </div>
   </section>;

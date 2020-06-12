@@ -25,9 +25,9 @@ module Styles = {
 };
 
 [@react.component]
-let make = (~bg, ~children) => {
+let make = (~bg, ~children, ~id) => {
   <header>
-    <h1 className=Styles.title> children </h1>
+    <h1 className=Styles.title id> children </h1>
     <div className={bg->Styles.highlight} />
   </header>;
 };
