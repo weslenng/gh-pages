@@ -50,7 +50,7 @@ let raw = {
     social: {
       discord: "https://discordapp.com/users/239549277611753473",
       github: "https://github.com/weslenng",
-      twitter: "https://twitter.com/weslenng2",
+      twitter: "https://twitter.com/theweslenng",
       linkedin: "https://www.linkedin.com/in/weslenng",
     },
   },
