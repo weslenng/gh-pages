@@ -28,6 +28,6 @@ module Styles = {
 let make = (~bg, ~children, ~id) => {
   <header>
     <h1 className=Styles.title id> children </h1>
-    <div className={bg->Styles.highlight} />
+    <div className={bg |> Styles.highlight} />
   </header>;
 };

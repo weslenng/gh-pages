@@ -40,16 +40,16 @@ let make = (~skills) => {
     <div className=Styles.root>
       <div className=Styles.container>
         <Title id="skill-set" bg={Css.rgb(255, 212, 94)}>
-          "My Skill Set"->rs
+          {"My Skill Set" |> rs}
         </Title>
       </div>
       <div className=Styles.tcontainer>
         {List.mapi(
-           (key, skill) => <SkillTable key={key->string_of_int} skill />,
+           (key, skill) => <SkillTable key={key |> string_of_int} skill />,
            skills,
          )
-         ->Array.of_list
-         ->ReasonReact.array}
+         |> Array.of_list
+         |> ReasonReact.array}
       </div>
     </div>
   </>;

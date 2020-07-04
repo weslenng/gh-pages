@@ -51,14 +51,14 @@ module Item = {
   [@react.component]
   let make = (~attr: Data.attr) => {
     <tr>
-      <td className=Styles.tfixed> attr.name->rs </td>
+      <td className=Styles.tfixed> {attr.name |> rs} </td>
       <td className=Styles.tdata>
         {List.mapi(
-           (key, tag) => <Tag key={key->string_of_int} tag />,
+           (key, tag) => <Tag key={key |> string_of_int} tag />,
            attr.tags,
          )
-         ->Array.of_list
-         ->ReasonReact.array}
+         |> Array.of_list
+         |> ReasonReact.array}
       </td>
     </tr>;
   };
@@ -67,21 +67,21 @@ module Item = {
 [@react.component]
 let make = (~skill: Data.skill) => {
   <div className=Styles.container>
-    <header> <h3 className=Styles.tcaption> skill.name->rs </h3> </header>
+    <header> <h3 className=Styles.tcaption> {skill.name |> rs} </h3> </header>
     <table className=Styles.table>
       <thead>
         <tr>
-          <th className=Styles.theader> "Name"->rs </th>
-          <th className=Styles.theader> "Tags"->rs </th>
+          <th className=Styles.theader> {"Name" |> rs} </th>
+          <th className=Styles.theader> {"Tags" |> rs} </th>
         </tr>
       </thead>
       <tbody>
         {List.mapi(
-           (key, attr) => {<Item key={key->string_of_int} attr />},
+           (key, attr) => {<Item key={key |> string_of_int} attr />},
            skill.attribs,
          )
-         ->Array.of_list
-         ->ReasonReact.array}
+         |> Array.of_list
+         |> ReasonReact.array}
       </tbody>
     </table>
   </div>;

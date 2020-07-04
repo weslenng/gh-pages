@@ -19,7 +19,7 @@ module Emoji = {
   [@react.component]
   let make = (~ariaLabel, ~codePoint) => {
     <span ariaLabel role="img">
-      {codePoint->Js.String.fromCodePoint->rs}
+      {codePoint |> Js.String.fromCodePoint |> rs}
     </span>;
   };
 };
@@ -35,12 +35,12 @@ module Item = {
     <p className=Styles.paragraph>
       {switch (prefix) {
        | Component(prefix) => prefix
-       | String(prefix) => prefix->rs
+       | String(prefix) => prefix |> rs
        | None => React.null
        }}
       {switch (sufix) {
        | Component(sufix) => sufix
-       | String(sufix) => <span> sufix->rs </span>
+       | String(sufix) => <span> {sufix |> rs} </span>
        | None => React.null
        }}
     </p>;
@@ -54,7 +54,7 @@ module Email = {
       className=Styles.link
       href={"mailto:" ++ href ++ "?Subject=Whats%20up!"}
       target="_top">
-      href->rs
+      {href |> rs}
     </a>;
   };
 };
@@ -72,40 +72,42 @@ module Link = {
 let make = (~profile: Data.profile) => {
   let age =
     ReasonDateFns.DateFns.differenceInYears(
-      Js.Date.fromString(profile.birth),
+      profile.birth |> Js.Date.fromString,
       Js.Date.make(),
     )
-    ->Js.Float.toString;
+    |> Js.Float.toString;
 
   <section className=Styles.section>
     <Title bg={Css.rgb(193, 69, 102)} id={profile.name}>
-      profile.name->rs
+      {profile.name |> rs}
     </Title>
     <Caption>
-      {(profile.role ++ " ")->rs}
+      {profile.role ++ " " |> rs}
       <Emoji ariaLabel="Hot Beverage Emoji" codePoint=9749 />
       <Emoji ariaLabel="Hammer and Wrench Emoji" codePoint=128736 />
     </Caption>
     <div className=Styles.details>
       <Item
-        prefix={("Age: " ++ age ++ " ")->String}
+        prefix={String("Age: " ++ age ++ " ")}
         sufix={
           Component(<Emoji ariaLabel="Sparkles Emoji" codePoint=10024 />)
         }
       />
       <Item
-        prefix={"Email: "->String}
+        prefix={String("Email: ")}
         sufix={Component(<Email href={profile.email} />)}
       />
-      <Item prefix={"Location: "->String} sufix={profile.location->String} />
+      <Item prefix={String("Location: ")} sufix={String(profile.location)} />
       <Item
-        prefix={"Personality: "->String}
-        sufix={profile.personality->String}
+        prefix={String("Personality: ")}
+        sufix={String(profile.personality)}
       />
       <Item
         prefix={
           Component(
-            <a className=Styles.link href="#skill-set"> "Skill Set"->rs </a>,
+            <a className=Styles.link href="#skill-set">
+              {"Skill Set" |> rs}
+            </a>,
           )
         }
         sufix=None

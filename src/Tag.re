@@ -3,7 +3,7 @@ module Styles = {
 
   let tag = tag =>
     style([
-      backgroundColor(tag->Data.color_of_tag),
+      backgroundColor(tag |> Data.color_of_tag),
       borderRadius(px(4)),
       color(rgb(55, 53, 47)),
       display(inlineBlock),
@@ -19,5 +19,5 @@ let rs = React.string;
 
 [@react.component]
 let make = (~tag) => {
-  <div className={tag->Styles.tag}> {tag->Data.string_of_tag->rs} </div>;
+  <div className={tag |> Styles.tag}> {tag |> Data.string_of_tag |> rs} </div>;
 };
