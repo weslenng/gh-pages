@@ -1,4 +1,4 @@
-# My GH Pages
+# My GitHub pages
 
 [![gh-pages](https://github.com/weslenng/gh-pages/workflows/gh-pages/badge.svg?branch=master)](https://github.com/weslenng/gh-pages/actions)
 
