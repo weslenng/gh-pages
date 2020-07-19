@@ -16,7 +16,7 @@
     "typeface-exo-2": "^1.1.4"
   },
   "devDependencies": {
-    "bs-platform": "^8.0.3",
+    "bs-platform": "7.1.1",
     "parcel": "^2.0.0-beta.1",
     "shx": "^0.3.2"
   }
