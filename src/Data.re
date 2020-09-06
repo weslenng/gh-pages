@@ -59,10 +59,10 @@ let raw = {
       name: "Languages",
       attribs: [
         {name: "Javascript", tags: [Advanced, WorkExperience]},
-        {name: "Typescript", tags: [Advanced, Toybox, WorkExperience]},
+        {name: "Typescript", tags: [Advanced, WorkExperience]},
         {name: "Golang", tags: [Intermediary, WorkExperience]},
         {name: "ReasonML, OCaml", tags: [Beginner, Interested]},
-        {name: "Rust", tags: [Beginner, Interested]},
+        {name: "Rust", tags: [Intermediary, Toybox, Interested]},
         {name: "C, C++", tags: [Beginner, Interested]},
       ],
     },
@@ -89,11 +89,11 @@ let raw = {
     {
       name: "Others",
       attribs: [
-        {name: "AWS", tags: [Beginner, WorkExperience]},
+        {name: "AWS", tags: [Intermediary, WorkExperience]},
         {name: "Google Cloud", tags: [Intermediary, Interested]},
         {name: "Docker, Kubernetes", tags: [Beginner, Interested]},
         {name: "Linux", tags: [Advanced, WorkExperience]},
-        {name: "Git", tags: [Beginner, WorkExperience]},
+        {name: "Git", tags: [Intermediary, WorkExperience]},
         {name: "Tests", tags: [Intermediary, Interested]},
         {name: "Security", tags: [Intermediary, Toybox]},
         {name: "Scrum, Agile", tags: [Beginner, WorkExperience]},
