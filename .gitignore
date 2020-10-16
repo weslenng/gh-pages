@@ -1,16 +1,11 @@
-# See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
-
-/.cache
-/lib/bs
-/node_modules
-
-/.bsb.lock
-/.merlin
-/.parcel-cache
-/.vscode
-
-/yarn-debug.log*
-/yarn-error.log*
-
-/dist
-/src/**/*.js
+.bsb.lock
+.DS_Store
+.merlin
+.vscode
+/.cache/
+/.parcel-cache/
+/dist/
+/lib/bs/
+/node_modules/
+*.bs.js
+npm-debug.log

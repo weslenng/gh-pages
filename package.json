@@ -6,14 +6,14 @@
     "parcel-watch": "parcel public/index.html"
   },
   "dependencies": {
-    "bs-css-emotion": "^1.2.0",
-    "date-fns": "^2.14.0",
+    "bs-css-emotion": "^2.1.0",
+    "date-fns": "^2.16.1",
     "normalize.css": "^8.0.1",
     "react": "^16.8.1",
     "react-dom": "^16.8.1",
-    "reason-date-fns": "^0.10.4",
-    "reason-react": "^0.9.1",
-    "typeface-exo-2": "^1.1.4"
+    "reason-date-fns": "^1.0.2",
+    "reason-react": ">=0.7.1",
+    "typeface-exo-2": "^1.1.13"
   },
   "devDependencies": {
     "bs-platform": "7.1.1",

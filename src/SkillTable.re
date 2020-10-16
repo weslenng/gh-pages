@@ -12,7 +12,7 @@ module Styles = {
           ~blur=px(16),
           ~spread=px(-16),
           ~inset=false,
-          rgba(0, 0, 0, 0.75),
+          rgba(0, 0, 0, `percent(75.0)),
         ),
       ),
       color(white),
