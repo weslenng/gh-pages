@@ -26,11 +26,11 @@ jobs:
 
       - run: npm i -g npm@next-7
       - run: npm install
-      - run: npm run build
+      - run: ./scripts/BUILD.sh
 
       - name: Deploy
         uses: peaceiris/actions-gh-pages@v3
         with:
           cname: weslenng.dev
           github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: dist
+          publish_dir: build
