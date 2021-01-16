@@ -41,7 +41,7 @@ type raw = {
 
 let raw = {
   profile: {
-    name: "@weslenng",
+    name: "Weslen Guerreiro",
     role: "Software Engineer",
     email: "weslenng@outlook.com",
     birth: "2000-12-31",
@@ -61,9 +61,9 @@ let raw = {
         {name: "Javascript", tags: [Advanced, WorkExperience]},
         {name: "Typescript", tags: [Advanced, WorkExperience]},
         {name: "Golang", tags: [Intermediary, WorkExperience]},
-        {name: "ReasonML, OCaml", tags: [Beginner, Interested]},
+        {name: "ReasonML, OCaml", tags: [Intermediary, Interested]},
         {name: "Rust", tags: [Intermediary, Toybox, Interested]},
-        {name: "C, C++", tags: [Beginner, Interested]},
+        {name: "C, C++", tags: [Intermediary, Interested]},
       ],
     },
     {
@@ -82,7 +82,7 @@ let raw = {
       attribs: [
         {name: "HTML5, CSS3", tags: [Advanced, WorkExperience]},
         {name: "UI, UX", tags: [Intermediary, NotInterested]},
-        {name: "React", tags: [Advanced, Toybox]},
+        {name: "React", tags: [Intermediary, Toybox]},
         {name: "GraphQL", tags: [Beginner, Interested]},
       ],
     },
@@ -95,7 +95,7 @@ let raw = {
         {name: "Linux", tags: [Advanced, WorkExperience]},
         {name: "Git", tags: [Intermediary, WorkExperience]},
         {name: "Tests", tags: [Intermediary, Interested]},
-        {name: "Security", tags: [Intermediary, Toybox]},
+        {name: "Security", tags: [Advanced, Toybox]},
         {name: "Scrum, Agile", tags: [Beginner, WorkExperience]},
       ],
     },
