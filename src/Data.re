@@ -60,10 +60,11 @@ let raw = {
       attribs: [
         {name: "Javascript", tags: [Advanced, WorkExperience]},
         {name: "Typescript", tags: [Advanced, WorkExperience]},
-        {name: "Golang", tags: [Intermediary, WorkExperience]},
-        {name: "ReasonML, OCaml", tags: [Intermediary, Interested]},
+        {name: "Golang", tags: [Advanced, WorkExperience]},
         {name: "Rust", tags: [Intermediary, Toybox, Interested]},
-        {name: "C, C++", tags: [Intermediary, Interested]},
+        {name: "Elixir, Erlang", tags: [Beginner, Interested]},
+        {name: "Reason, OCaml", tags: [Intermediary, Interested]},
+        {name: "C, C++", tags: [Intermediary]},
       ],
     },
     {
@@ -71,10 +72,10 @@ let raw = {
       attribs: [
         {name: "Node.JS", tags: [Advanced, WorkExperience]},
         {name: "REST APIs", tags: [Advanced, WorkExperience]},
-        {name: "GraphQL", tags: [Beginner, Interested]},
+        {name: "GraphQL", tags: [Intermediary, Interested]},
         {name: "Microservices", tags: [Beginner, Interested]},
         {name: "SQL DBs", tags: [Intermediary, WorkExperience]},
-        {name: "NoSQL DBs", tags: [Beginner, Interested]},
+        {name: "NoSQL DBs", tags: [Intermediary, Interested]},
       ],
     },
     {
@@ -83,15 +84,15 @@ let raw = {
         {name: "HTML5, CSS3", tags: [Advanced, WorkExperience]},
         {name: "UI, UX", tags: [Intermediary, NotInterested]},
         {name: "React", tags: [Intermediary, Toybox]},
-        {name: "GraphQL", tags: [Beginner, Interested]},
+        {name: "GraphQL", tags: [Intermediary, Interested]},
       ],
     },
     {
       name: "Others",
       attribs: [
-        {name: "AWS", tags: [Intermediary, WorkExperience]},
+        {name: "AWS", tags: [Advanced, WorkExperience]},
         {name: "Google Cloud", tags: [Intermediary, Interested]},
-        {name: "Docker, Kubernetes", tags: [Beginner, Interested]},
+        {name: "Docker, Kubernetes", tags: [Intermediary, Interested]},
         {name: "Linux", tags: [Advanced, WorkExperience]},
         {name: "Git", tags: [Intermediary, WorkExperience]},
         {name: "Tests", tags: [Intermediary, Interested]},
